@@ -1,0 +1,45 @@
+name: Rust Release
+
+on:
+  push:
+    tags: "v*"
+
+permissions:
+  contents: write
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  build-and-release:
+    runs-on: windows-latest
+
+    strategy:
+      matrix:
+        arch:
+          # - i686
+          - x86_64
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Add msbuild
+        uses: microsoft/setup-msbuild@v2
+
+      - name: Build Release Artifacts
+        run: msbuild alone-in-the-dark-internal-trainer.sln -t:rebuild -p:Configuration=Release
+
+      - name: Create Release Archive
+        run: Get-ChildItem -Path "x64/Release" -Filter "*.dll" | Select-Object -First 1 | ForEach-Object { Compress-Archive -Path $_.FullName -DestinationPath ("${{ matrix.arch }}" + ".zip") }
+
+      - name: Generate Changelog
+        run: git log -1 --pretty=format:"%s%n%b" > CHANGELOG.md
+
+      - name: Publish Release
+        uses: softprops/action-gh-release@v2
+        with:
+          body_path: CHANGELOG.md
+          prerelease: false
+          files: ${{ matrix.arch }}.zip
+          fail_on_unmatched_files: true

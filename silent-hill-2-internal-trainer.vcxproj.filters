@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="h">
+      <UniqueIdentifier>{a470f123-9eec-4e0e-9c3c-2f47d54ab9a8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cpp">
+      <UniqueIdentifier>{ed49f515-0f03-40ca-8c80-0979924712b9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{0ff9004f-d905-4e90-a78b-cc06806a55b9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lib">
+      <UniqueIdentifier>{96b09262-a514-450a-b9b8-44c80a0011a0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\d3d12hook.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\dllmain.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gdk.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="deps\imgui\imgui.cpp">
+      <Filter>cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="deps\imgui\imgui_draw.cpp">
+      <Filter>cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="deps\imgui\imgui_impl_win32.cpp">
+      <Filter>cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="deps\imgui\imgui_tables.cpp">
+      <Filter>cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="deps\imgui\imgui_widgets.cpp">
+      <Filter>cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="deps\ue_5_1_1_sdk\SDK\Engine_functions.cpp">
+      <Filter>cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="deps\ue_5_1_1_sdk\SDK\Basic.cpp">
+      <Filter>cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="deps\ue_5_1_1_sdk\SDK\CoreUObject_functions.cpp">
+      <Filter>cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="deps\imgui\imgui_impl_dx12.cpp">
+      <Filter>cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="src\d3d11hook.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="deps\imgui\imgui_impl_dx11.cpp">
+      <Filter>cpp</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\d3d12hook.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gdk.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="deps\detours\detours.h">
+      <Filter>h</Filter>
+    </ClInclude>
+    <ClInclude Include="deps\imgui\imstb_truetype.h">
+      <Filter>h</Filter>
+    </ClInclude>
+    <ClInclude Include="deps\imgui\imconfig.h">
+      <Filter>h</Filter>
+    </ClInclude>
+    <ClInclude Include="deps\imgui\imgui.h">
+      <Filter>h</Filter>
+    </ClInclude>
+    <ClInclude Include="deps\imgui\imgui_impl_win32.h">
+      <Filter>h</Filter>
+    </ClInclude>
+    <ClInclude Include="deps\imgui\imgui_internal.h">
+      <Filter>h</Filter>
+    </ClInclude>
+    <ClInclude Include="deps\imgui\imstb_rectpack.h">
+      <Filter>h</Filter>
+    </ClInclude>
+    <ClInclude Include="deps\imgui\imstb_textedit.h">
+      <Filter>h</Filter>
+    </ClInclude>
+    <ClInclude Include="deps\ue_5_1_1_sdk\SDK\Engine_classes.hpp">
+      <Filter>h</Filter>
+    </ClInclude>
+    <ClInclude Include="deps\imgui\imgui_impl_dx12.h">
+      <Filter>h</Filter>
+    </ClInclude>
+    <ClInclude Include="src\d3d11hook.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="deps\imgui\imgui_impl_dx11.h">
+      <Filter>h</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="deps\detours\detours.x64.release.lib">
+      <Filter>lib</Filter>
+    </Library>
+  </ItemGroup>
+</Project>
